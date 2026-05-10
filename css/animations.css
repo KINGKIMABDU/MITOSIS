@@ -1,0 +1,17 @@
+@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideInInfo{from{opacity:0.7;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeOutInfo{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-10px)}}
+@keyframes fadeInInfo{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeOutPhase{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-8px)}}
+@keyframes fadeInPhase{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes descAppear{from{opacity:0;color:var(--text2);transform:translateY(6px)}to{opacity:1;color:var(--text2);transform:translateY(0)}}
+@keyframes nameAppear{from{opacity:0;color:var(--text);transform:scale(0.98)}to{opacity:1;color:var(--text);transform:scale(1)}}
+
+@media (prefers-reduced-motion: reduce) {
+  .i-desc.appear, .i-name.appear {
+    animation: none !important;
+    opacity: 1 !important;
+    color: var(--accent) !important;
+    transform: none !important;
+  }
+}

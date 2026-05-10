@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Mitose — Interaktive Zell-Simulation</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<!-- INTRO -->
+<div id="intro">
+  <canvas id="intro-canvas" role="img" aria-label="Intro Hintergrund"></canvas>
+  <div class="intro-inner">
+    <p class="pre-title">Biologie · Zellbiologie</p>
+    <h1 class="main-title">Die Mitose</h1>
+    <p class="sub-title">Zellsimulation · Visualisiert</p>
+    <div class="lang-selector">
+      <button class="lang-btn active" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <button class="intro-btn" id="start-btn">Simulation starten →</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" role="main">
+  <canvas id="bg-canvas"></canvas>
+  <div id="topbar">
+    <div class="tb-phase" id="tb-phase">INTERPHASE</div>
+    <div class="tb-logo">DIE MITOSE</div>
+    <div class="tb-count" id="tb-count">Phase 0 / 6</div>
+  </div>
+  <div id="prog"><div id="prog-fill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+  <div id="content">
+    <div id="cv-wrap">
+      <button class="nav" id="nav-p" tabindex="0" aria-label="Vorherige Phase">‹</button>
+      <canvas id="cell-canvas" role="img" aria-label="Zell-Simulation Canvas"></canvas>
+      <button class="nav" id="nav-n" tabindex="0" aria-label="Nächste Phase">›</button>
+      <div id="legend"></div>
+      <!-- Auto-updating copyright year via JS — no manual edits needed each year -->
+      <div id="credit"></div>
+    </div>
+    <div id="info">
+      <div>
+        <div class="i-badge" id="i-badge">Vorbereitung</div>
+        <div class="i-name" id="i-name">Interphase</div>
+      </div>
+      <div class="i-div"></div>
+      <div class="i-desc" id="i-desc" aria-live="polite"></div>
+      <div>
+        <div class="facts-head">Schlüsselprozesse</div>
+        <div id="i-facts"></div>
+      </div>
+      <div id="cell-type-selector">
+        <button class="ct-btn active" data-type="0" aria-label="Zelltyp: Tierzelle">Tierzelle</button>
+        <button class="ct-btn" data-type="1" aria-label="Zelltyp: Menschenzelle">Menschenzelle</button>
+        <button class="ct-btn" data-type="2" aria-label="Zelltyp: Pflanzenzelle">Pflanzenzelle</button>
+      </div>
+      <div class="i-result" id="i-result"></div>
+    </div>
+  </div>
+  <div id="timeline" role="tablist" aria-label="Mitosis Phasen">
+    <div class="tl active" data-p="0" role="tab" tabindex="0" aria-selected="true"><div class="tldot"></div><div class="tlname">Interphase</div></div>
+    <div class="tl"        data-p="1" role="tab" tabindex="0" aria-selected="false"><div class="tldot"></div><div class="tlname">Prophase</div></div>
+    <div class="tl"        data-p="2" role="tab" tabindex="0" aria-selected="false"><div class="tldot"></div><div class="tlname">Prometaphase</div></div>
+    <div class="tl"        data-p="3" role="tab" tabindex="0" aria-selected="false"><div class="tldot"></div><div class="tlname">Metaphase</div></div>
+    <div class="tl"        data-p="4" role="tab" tabindex="0" aria-selected="false"><div class="tldot"></div><div class="tlname">Anaphase</div></div>
+    <div class="tl"        data-p="5" role="tab" tabindex="0" aria-selected="false"><div class="tldot"></div><div class="tlname">Telophase</div></div>
+    <div class="tl"        data-p="6" role="tab" tabindex="0" aria-selected="false"><div class="tldot"></div><div class="tlname">Cytokinese</div></div>
+  </div>
+</div>
+<button id="auto-btn" tabindex="0" aria-label="Auto-Play umschalten">▶ START</button>
+<button id="reset-btn" tabindex="0" aria-label="Simulation zurücksetzen">↺ RESET</button>
+
+<!-- Scripts in order -->
+<script src="js/i18n.js"></script>
+<script src="content/explanations/phases.js"></script>
+<script src="js/simulations/cell-simulation.js"></script>
+<script src="js/animations/phase-renderer.js"></script>
+<script src="js/components/ui-controller.js"></script>
+<script src="js/app.js"></script>
+
+<!-- Auto-updating copyright — year updates automatically, no manual edits needed -->
+<script>
+  (function(){
+    const startYear = 2026;
+    const currentYear = new Date().getFullYear();
+    const yearStr = currentYear > startYear
+      ? startYear + '\u2013' + currentYear
+      : String(startYear);
+    document.getElementById('credit').innerHTML =
+      '\u00a9 ' + yearStr + ' Abdullah Alhariri (킹키마브두)<br>All Rights Reserved';
+  })();
+</script>
+</body>
+</html>
