@@ -57,22 +57,22 @@ It is provided here for **free educational use** — students, teachers, and cur
 
 ## 🧬 Scientific Accuracy — Full Review
 
-All seven phase animations were reviewed against standard cell biology references. Here is a phase-by-phase breakdown of what is correct and what was fixed:
+All seven phase animations were designed and reviewed against standard cell biology references. Here is a phase-by-phase breakdown of the scientific details represented:
 
 ### Interphase ✅
 The three sub-phases (G1, S, G2) are labelled progressively. DNA replication is shown in the S-phase window only (after 25% progress). The nucleolus is present and visible, consistent with active rRNA production in Interphase.
 
-### Prophase ✅ (fixed)
-Chromosomes condense **at their original in-situ positions** — not randomly distributed — which matches real fluorescence microscopy of chromatin territories. The nucleolus disappears during Prophase (correct). The nuclear envelope breaks down into vesicles (correct). Spindle poles only appear from ~20% progress onward, not immediately, matching the gradual nature of spindle assembly.
+### Prophase ✅
+Chromosomes condense **at their original in-situ positions** — not randomly distributed — which matches real fluorescence microscopy of chromatin territories. The nucleolus disappears during Prophase. The nuclear envelope breaks down into vesicles. Spindle poles only appear from ~20% progress onward, not immediately, matching the gradual nature of spindle assembly.
 
 ### Prometaphase ✅
-Kinetochore attachment is shown as a separate event from spindle formation (correct — kinetochores are not accessible until the envelope breaks down). Chromosomes migrate from their in-situ positions toward the equatorial plate during this phase.
+Kinetochore attachment is shown as a separate event from spindle formation (kinetochores are not accessible until the envelope breaks down). Chromosomes migrate from their in-situ positions toward the equatorial plate during this phase.
 
 ### Metaphase ✅
 The equatorial plate dashed line and the M-Checkpoint label are present. The M-Checkpoint label appears only at >70% phase progress, correctly reflecting that it is a late Metaphase event (the spindle assembly checkpoint must be fully satisfied before Anaphase onset).
 
-### Anaphase ✅ (scientifically fixed)
-This phase had the most important scientific correction. Previously, separated chromatids were still drawn as **X-shapes** after centromere splitting — but an X-shape (two sister chromatids joined at a centromere) only exists *before* Anaphase-A. Once the centromere splits, each chromosome is a **single V- or J-shaped chromatid** with the centromere leading toward the pole and the two arms trailing behind. A dedicated `chromSingle()` function now renders this V-shape correctly. The Anaphase-A / Anaphase-B distinction (chromatid movement vs. pole separation/cell elongation) is preserved and labelled.
+### Anaphase ✅
+This phase correctly portrays the split of sister chromatids. An X-shape (two sister chromatids joined at a centromere) only exists *before* Anaphase-A. Once the centromere splits, each chromosome is properly rendered as a **single V- or J-shaped chromatid** with the centromere leading toward the pole and the two arms trailing behind. The Anaphase-A / Anaphase-B distinction (chromatid movement vs. pole separation/cell elongation) is accurately preserved and labelled.
 
 ### Telophase ✅
 Both nuclei reform with chromosomes visible inside, then progressively decondense to chromatin (correct sequence). Spindle remnants fade out over time. The cell outline remains elongated from Anaphase, as expected.
@@ -90,8 +90,8 @@ Three biologically distinct modes are rendered:
 No build step, no dependencies, no install required.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/die-mitose.git
-cd die-mitose
+git clone https://github.com/KINGKIMABDU/MITOSIS.git
+cd MITOSIS
 ```
 
 Open `index.html` directly in any modern browser, or serve it locally for best results:
