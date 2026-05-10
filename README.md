@@ -1,8 +1,8 @@
-# Die Mitose — Interaktive Zell-Simulation
+# Mitosis — Interactive Cell Simulation
 
 <div align="center">
 
-![Mitose Banner](https://img.shields.io/badge/Biologie-Zellbiologie-5B6F8A?style=for-the-badge)
+![Mitosis Banner](https://img.shields.io/badge/Biology-Cell_Biology-5B6F8A?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-7B5E7B?style=for-the-badge)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-8A9F6B?style=for-the-badge)
 ![HTML5 Canvas](https://img.shields.io/badge/Canvas-HTML5-8B7355?style=for-the-badge)
@@ -32,7 +32,7 @@ It is provided here for **free educational use** — students, teachers, and cur
 - **Bilingual Support** — full interface and educational content available in both English and German
 - **Mobile Responsive** — fully functional and optimised for smaller screens and touch devices
 - **Progressive fact highlighting** — key facts light up in the sidebar as the animation advances
-- **Cell type switcher** — Cytokinesis renders Tierzelle, Menschenzelle, and Pflanzenzelle with biologically distinct visuals
+- **Cell type switcher** — Cytokinesis renders Animal Cell, Human Cell, and Plant Cell with biologically distinct visuals
 - **Auto-play & manual navigation** — arrow keys, number keys 1–7, timeline clicks, or the ▶ START button
 - **Zoom support** — scroll wheel to zoom in/out on the canvas
 - **Animated phase legend** — per-phase colour key fades in smoothly with each transition
@@ -79,9 +79,9 @@ Both nuclei reform with chromosomes visible inside, then progressively decondens
 
 ### Cytokinesis ✅
 Three biologically distinct modes are rendered:
-- **Tierzelle** — hourglass constriction driven by an actin–myosin contractile ring (cleavage furrow), correctly tightening from the outside in
-- **Menschenzelle** — identical mechanism to Tierzelle (correct — human somatic cells use the same actin–myosin ring); 46 chromosomes (2 × 23) noted
-- **Pflanzenzelle** — cell plate forms from vesicle fusion in the centre and grows outward (inside-out direction, correct for phragmoplast-driven plate formation); parent cell wall rendered as a rectangle (correct — plant cells have a rigid wall)
+- **Animal Cell** — hourglass constriction driven by an actin–myosin contractile ring (cleavage furrow), correctly tightening from the outside in
+- **Human Cell** — identical mechanism to Animal Cell (correct — human somatic cells use the same actin–myosin ring); 46 chromosomes (2 × 23) noted
+- **Plant Cell** — cell plate forms from vesicle fusion in the centre and grows outward (inside-out direction, correct for phragmoplast-driven plate formation); parent cell wall rendered as a rectangle (correct — plant cells have a rigid wall)
 
 ---
 
@@ -109,7 +109,7 @@ Then open `http://localhost:8080`.
 ## 📁 Project Structure
 
 ```
-die-mitose/
+MITOSIS/
 ├── index.html                          # Entry point
 ├── LICENSE                             # Proprietary — All Rights Reserved
 ├── README.md
@@ -122,11 +122,12 @@ die-mitose/
 │   │   └── cell-simulation.js          # Shared drawing primitives
 │   ├── animations/
 │   │   └── phase-renderer.js           # Per-phase drawing functions
-│   └── components/
-│       └── ui-controller.js            # Navigation, auto-play, keyboard, ARIA
+│   ├── components/
+│   │   └── ui-controller.js            # Navigation, auto-play, keyboard, ARIA
+│   └── i18n.js                         # Translation dictionaries and language switcher
 └── content/
     └── explanations/
-        └── phases.js                   # Phase text, facts, legend data (German)
+        └── phases.js                   # Phase text, facts, legend data (Bilingual)
 ```
 
 ---
