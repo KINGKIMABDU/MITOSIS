@@ -11,7 +11,7 @@
 
 Built as a college biology project and made freely available for educational use.
 
-[▶ Live Demo](#) · [Report a Bug](../../issues) · [Request a Feature](../../issues)
+[▶ Live Demo](https://kingkimabdu.github.io/MITOSIS/) · [Report a Bug](../../issues) · [Request a Feature](../../issues)
 
 </div>
 
