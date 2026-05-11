@@ -3,13 +3,13 @@ const i18n = {
     intro_pre: "Biologie · Zellbiologie",
     intro_main: "Die Mitose",
     intro_sub: "Zellsimulation · Visualisiert",
-    intro_btn: "Simulation starten →",
+    intro_btn: "Simulation starten <i class=\"fa-solid fa-arrow-right\"></i>",
     app_tb_logo: "DIE MITOSE",
     app_tb_phase: "Phase",
     app_legend: "Legende",
-    app_reset: "↺ RESET",
-    app_auto_start: "▶ START",
-    app_auto_pause: "⏸ PAUSE",
+    app_reset: "<i class=\"fa-solid fa-rotate-left\"></i> RESET",
+    app_auto_start: "<i class=\"fa-solid fa-play\"></i> START",
+    app_auto_pause: "<i class=\"fa-solid fa-pause\"></i> PAUSE",
     app_facts: "Schlüsselprozesse",
     aria_prev: "Vorherige Phase",
     aria_next: "Nächste Phase",
@@ -38,13 +38,13 @@ const i18n = {
     intro_pre: "Biology · Cell Biology",
     intro_main: "Mitosis",
     intro_sub: "Cell Simulation · Visualized",
-    intro_btn: "Start Simulation →",
+    intro_btn: "Start Simulation <i class=\"fa-solid fa-arrow-right\"></i>",
     app_tb_logo: "MITOSIS",
     app_tb_phase: "Phase",
     app_legend: "Legend",
-    app_reset: "↺ RESET",
-    app_auto_start: "▶ START",
-    app_auto_pause: "⏸ PAUSE",
+    app_reset: "<i class=\"fa-solid fa-rotate-left\"></i> RESET",
+    app_auto_start: "<i class=\"fa-solid fa-play\"></i> START",
+    app_auto_pause: "<i class=\"fa-solid fa-pause\"></i> PAUSE",
     app_facts: "Key Processes",
     aria_prev: "Previous Phase",
     aria_next: "Next Phase",
@@ -86,7 +86,7 @@ function switchLang(lang) {
   document.querySelector('.pre-title').textContent = t('intro_pre');
   document.querySelector('.main-title').textContent = t('intro_main');
   document.querySelector('.sub-title').textContent = t('intro_sub');
-  document.getElementById('start-btn').textContent = t('intro_btn');
+  document.getElementById('start-btn').innerHTML = t('intro_btn');
   document.querySelector('.tb-logo').textContent = t('app_tb_logo');
   document.getElementById('reset-btn').innerHTML = t('app_reset');
   document.getElementById('auto-btn').innerHTML = isPlaying ? t('app_auto_pause') : t('app_auto_start');

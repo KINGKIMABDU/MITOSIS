@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MITOSIS - KINGKIMABDU</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -22,7 +23,7 @@
         <button class="lang-btn active" data-lang="de">DE</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
-      <button class="intro-btn" id="start-btn">Simulation starten →</button>
+      <button class="intro-btn" id="start-btn">Simulation starten <i class="fa-solid fa-arrow-right"></i></button>
     </div>
   </div>
 
@@ -39,9 +40,9 @@
     </div>
     <div id="content">
       <div id="cv-wrap">
-        <button class="nav" id="nav-p" tabindex="0" aria-label="Vorherige Phase">‹</button>
+        <button class="nav" id="nav-p" tabindex="0" aria-label="Vorherige Phase"><i class="fa-solid fa-chevron-left"></i></button>
         <canvas id="cell-canvas" role="img" aria-label="Zell-Simulation Canvas"></canvas>
-        <button class="nav" id="nav-n" tabindex="0" aria-label="Nächste Phase">›</button>
+        <button class="nav" id="nav-n" tabindex="0" aria-label="Nächste Phase"><i class="fa-solid fa-chevron-right"></i></button>
         <div id="legend"></div>
         <!-- Auto-updating copyright year via JS — no manual edits needed each year -->
         <div id="credit"></div>
@@ -96,8 +97,8 @@
       </div>
     </div>
   </div>
-  <button id="auto-btn" tabindex="0" aria-label="Auto-Play umschalten">▶ START</button>
-  <button id="reset-btn" tabindex="0" aria-label="Simulation zurücksetzen">↺ RESET</button>
+  <button id="auto-btn" tabindex="0" aria-label="Auto-Play umschalten"><i class="fa-solid fa-play"></i> START</button>
+  <button id="reset-btn" tabindex="0" aria-label="Simulation zurücksetzen"><i class="fa-solid fa-rotate-left"></i> RESET</button>
 
   <!-- Scripts in order -->
   <script src="js/i18n.js"></script>
