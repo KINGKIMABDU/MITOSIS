@@ -44,8 +44,9 @@ const PHASES_DE = [
     result: 'Erst wenn der Checkpoint bestätigt, dass alles korrekt ist, startet die nächste Phase. Fehler hier führen zu falscher Verteilung der Erbinformation.'
   },
   {
-    name: 'Anaphase', badge: 'Phase 4',
-    desc: 'Das ist der wichtigste Schritt: Die Verbindung zwischen den beiden Hälften jedes Chromosoms löst sich, und die beiden Hälften (jetzt eigene Chromosomen) wandern zu den entgegengesetzten Enden der Zelle. Die Zelle streckt sich dabei in die Länge.',
+    name: 'Anaphase',
+    badge: 'Phase 4',
+    desc: 'Die Verbindung zwischen den beiden Hälften jedes Chromosoms löst sich, und die beiden Hälften (jetzt eigene Chromosomen) wandern zu den entgegengesetzten Enden der Zelle. Die Zelle streckt sich dabei in die Länge.',
     facts: [
       'Anaphase A: Die Zentromere (Verbindungsstellen) trennen sich, die Schwesterchromatiden wandern zu den Zellpolen (die Spindelfasern verkürzen sich dabei)',
       'Die getrennten Hälften sind nun eigenständige Chromosomen, jeder Pol bekommt einen kompletten Satz',
@@ -53,7 +54,7 @@ const PHASES_DE = [
       'Ablauf: Erst trennen sich die Chromatiden (A), dann entfernen sich die Pole (B)'
     ],
     result: 'Dieser Schritt kann nicht mehr rückgängig gemacht werden. Wenn sich Chromosomen nicht korrekt trennen, entstehen Zellen mit falscher Chromosomenzahl, das kann Krebs oder Erbkrankheiten verursachen.'
-  },
+},
   {
     name: 'Telophase', badge: 'Phase 5',
     desc: 'An jedem Ende der Zelle hat sich nun ein vollständiger Satz Chromosomen angesammelt. Um diese Chromosomen herum bilden sich neue Zellkerne. Die Chromosomen entspannen sich dabei wieder und werden zu locker verteiltem Chromatin.',
