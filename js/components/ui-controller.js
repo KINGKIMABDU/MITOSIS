@@ -241,3 +241,41 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('resize',()=>{
   resizeIntro(); initBg(); sizeCv();
 });
+
+// Activity tracking for buttons fade out
+let actionActivityTimeout;
+const actionWrap = document.getElementById('action-btn-wrapper');
+const infoPanel = document.getElementById('info');
+
+function showActionBtns() {
+  if(!actionWrap) return;
+  actionWrap.classList.add('visible');
+  clearTimeout(actionActivityTimeout);
+  actionActivityTimeout = setTimeout(() => {
+    // If mouse is currently hovering one of the buttons, we don't hide
+    if(!actionWrap.matches(':hover')) {
+      actionWrap.classList.remove('visible');
+    }
+  }, 2000);
+}
+
+if(infoPanel) {
+  infoPanel.addEventListener('mousemove', showActionBtns);
+  infoPanel.addEventListener('touchstart', showActionBtns, {passive: true});
+  infoPanel.addEventListener('touchmove', showActionBtns, {passive: true});
+  infoPanel.addEventListener('scroll', showActionBtns, {passive: true});
+  infoPanel.addEventListener('wheel', showActionBtns, {passive: true});
+}
+
+if(actionWrap) {
+  actionWrap.addEventListener('mouseenter', () => {
+    clearTimeout(actionActivityTimeout);
+    actionWrap.classList.add('visible');
+  });
+  actionWrap.addEventListener('mouseleave', () => {
+    showActionBtns();
+  });
+}
+
+// Show buttons initially to let the user know they are there
+showActionBtns();
