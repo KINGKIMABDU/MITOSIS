@@ -19,7 +19,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .intro-btn{margin-top:2rem;padding:0.7rem 2.2rem;background:var(--accent);border:none;color:white;font-family:'Segoe UI',Arial,sans-serif;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;opacity:0;animation:fadeUp 1s 1.3s forwards}
 .intro-btn:hover{background:var(--accent2)}
 
-#app{display:none;flex-direction:column;height:100vh;position:relative}
+#app{display:none;flex-direction:column;height:100vh;height:100dvh;position:relative}
 #app.on{display:flex}
 #bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
 
@@ -41,7 +41,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 #nav-p{left:1.2rem}
 #nav-n{right:1.2rem}
 
-#info{width:280px;flex-shrink:0;background:var(--white);border-left:1px solid var(--border);padding:1.6rem 1.3rem;display:flex;flex-direction:column;gap:1.1rem;overflow-y:auto;z-index:5}
+#info{width:280px;flex-shrink:0;background:var(--white);border-left:1px solid var(--border);padding:1.6rem 1.3rem 5.5rem 1.3rem;display:flex;flex-direction:column;gap:1.1rem;overflow-y:auto;z-index:5}
 .i-badge{display:inline-block;padding:0.2rem 0.6rem;background:var(--bg2);color:var(--accent);font-family:'Segoe UI',Arial,sans-serif;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;border-radius:3px;font-weight:600;width:fit-content;transition:all 0.3s ease}
 .i-name{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--text);margin-top:0.3rem;line-height:1.3;transition:all 0.4s ease}
 .i-div{height:1px;background:var(--border)}
